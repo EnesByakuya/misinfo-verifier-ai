@@ -153,7 +153,8 @@ if __name__ == "__main__":
     query = input("Enter search term: ")
 
     if query_exists(query):
-        print(f"'{query}' has already been searched. Fetching from database instead.")
+        print(f"'{query}' has already been searched. Fetching from database instead. Not implemented yet :D")
+        # TODO: Fetch from database
     else:
         results = fetch_articles(query)
 
