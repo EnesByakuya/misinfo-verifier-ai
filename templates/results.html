@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results - Misinfo Verifier AI</title>
+</head>
+<body>
+<h1>Results for "{{ query }}"</h1>
+{% if message %}
+<p>{{ message }}</p>
+{% else %}
+<ul>
+  {% for title, link, _, credibility in results %}
+  <li>
+    <a href="{{ link }}" target="_blank">{{ title }}</a> - {{ credibility }}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+<a href="/">Back to Search</a>
+</body>
+</html>
